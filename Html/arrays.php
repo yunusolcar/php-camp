@@ -2,7 +2,7 @@
 
 //ARRAYS 
 
-$students = array(4, 6, 7, 8, 9, "Beatrice", "Vergilius");
+$students = array(4, 6, 7, 8, 10, "Beatrice", "Vergilius");
 
 /* $students = array(); $students[] = 45; $students[] = "Ali"; */
 
