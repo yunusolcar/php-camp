@@ -58,10 +58,27 @@ echo "<hr>";
 //Sort
 $notes = array("Turkish" => "60", "Maths" => "90", "Physics" => "100");
 
-asort($notes);  //Sıralama yapmak için kullanılır.(küçükten büyüğe)
+asort($notes); //Sıralama yapmak için kullanılır.(küçükten büyüğe)
 arsort($notes); //Sıralama yapmak için kullanılır.(büyükten küçüğe)
 
 print_r($notes); // Array ( [Physics] => 100 [Maths] => 90 [Turkish] => 60 )s
+echo "<hr>";
+
+
+//Shuffle
+
+$students1 = array("Jhon", "Melina", "Errick", "Sementha"); //random karıştırma işlemi
+shuffle($students1);
+print_r($students1);
+
+
+//Count
+
+$numbers = array(1, 3, 15, 7, 19, 10);
+
+echo "<hr>Toplam Elaman: " . count($numbers); //Arraydaki elaman sayısı //sizeof($.) şek. kullanılabilir.
+echo "<br>Toplama Sonucu: " . array_sum($numbers); //Toplama işlemi yapmak için "sum"
+echo "<br>Çarpım Sonucu: " . array_product($numbers); //Çarpma işlemi için "product"
 
 
 ?>
