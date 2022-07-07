@@ -22,12 +22,41 @@ foreach ($students as $student) {
     echo "Result: " . $result;
     echo "<br><br><hr><br>";
 }
+/*Name Surname: Mehmet Score 1: 60 Score 2: 80 Average: 70 Result: Passed*/
 
-/*Name Surname: Mehmet
-Score 1: 60
-Score 2: 80
-Average: 70
-Result: Passed*/
+
+//e.g 2
+//Fonksiyonlar ile 4 İşlem
+
+function calculation($value1 = 0, $value2 = 0, $fouroperations = "")
+{
+    switch ($fouroperations) {
+        case "+":
+            $result = $value1 + $value2;
+            $info = "Toplama Sonucu ($value1 + $value2): $result ";
+            break;
+        case "-":
+            $result = $value1 - $value2;
+            $info = "Çıkarma Sonucu ($value1 - $value2): $result";
+            break;
+        case "*":
+            $result = $value1 * $value2;
+            $info = "Çarpım Sonucu ($value1 * $value2): $result";
+            break;
+        case "/":
+            $result = $value1 / $value2;
+            $info = "Bölüm Sonucu ($value1 / $value2): $result";
+            break;
+        default:
+            $result = "Incorrect Operation!";
+            break;
+    }
+    return $info;
+
+}
+
+echo calculation(1800, 9, "/");
+
 
 
 ?>
