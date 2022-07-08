@@ -1,0 +1,6 @@
+<?php
+
+$degisken = "Yunus Xxx";
+
+
+?>
