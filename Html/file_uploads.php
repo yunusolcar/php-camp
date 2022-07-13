@@ -2,7 +2,7 @@
 
 //DOSYA YÜKLEME // FILE UPLOAD
 //encytpe kullanılmazsa dosya ismi tek gider. 
-//kullanımı ile dosyanın kendisi de yüklenmektedir.
+//kullanımı ile dosyanın kendisi de yüklenmektedir. //tmp_name geçici dosya ismi 
 
 //echo $_FILES["file"]["name"]; //dosya adı, bazı indisler (size, name, type, error)
 //çıktı > x.png

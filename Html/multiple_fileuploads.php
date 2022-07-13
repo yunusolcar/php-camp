@@ -3,10 +3,10 @@
 //ÇOKLU DOSYA YÜKLEME // MULTIPLE FILE UPLOAD
 //En önemli kısım! Birden fazla dosya yüklerken(34.satır) multiple ifadesi kullanılır.
 //En önemli kısım! Birden fazla dosya yüklerken (35. satır) ...[] şeklinde tanımlanır.
-//tmp name ifadesi de unutulmamalıdır.
+//tmp name ifadesi de unutulmamalıdır. geçici dosya ismi
 
 foreach ($_FILES["myfile"]["name"] as $i => $name) {
-    if (move_uploaded_file($_FILES["myfile"]["tmp_name"][$i], $name)) {
+    if (move_uploaded_file($_FILES["myfile"]["tmp_name"][$i], $name)) { //tmp yerine $name yeni isim
 
         echo "<b>File Succesfully Uploaded: </b> " . $_FILES["myfile"]["name"][$i];
     }
