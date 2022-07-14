@@ -1,6 +1,6 @@
 <?php
 
-//DOSYA İŞLEMLERİ - CREATE
+//DOSYA İŞLEMLERİ - CREATE, READ
 
 /* $file = "test.txt"; touch($file); //touch; Sunucuda aynı konumda bu dosyayı oluştururç
  if (touch($file, time() - 3600, time() - 3600)) { //2. parametre son değişiklik zamanını 1 saat öncesine ayarlar. 3. parametre son erişim zamanının ayarlanması
@@ -41,5 +41,49 @@ foreach ($names as $name) {
     $point++;
 }
 fclose($file);
+
+
+//READ 
+$file = fopen("test.txt", "rb");
+
+echo fread($file, filesize("test.txt")); //dosyanın tamamını okumak için fread, paramaetre olarak filesize(tamamı)
+fclose($file);
+
+
+//RENAME
+touch("test.txt");
+
+
+rename("test.txt", "newtest.txt"); //Dosya ismi değiştirmek için kullanılır
+
+
+//COPY
+touch("newtest.txt");
+if (copy("newtest.txt", "deneme.txt")) {
+    echo "File copied";
+}
+
+
+//EXIST
+if (file_exists("deneme.txt")) { //dosya varlığı sorgulama
+    echo "File exist";
+}
+else {
+    echo "file does not exist";
+}
+
+
+//UNLINK
+$dosya = "deneme.txt";
+
+if (file_exists($dosya)) {
+    unlink($dosya);
+    echo "$dosya File deleted!";
+}
+else {
+    echo "The file does not exist and could not be deleted";
+}
+
+
 
 ?>
